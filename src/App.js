@@ -98,7 +98,8 @@ class App extends Component {
           <input
             value={answer}
             onChange={this.onChange}
-            type="text"
+            type="number"
+            autoComplete="off"
             id="answerField"
           />
           <button type="submit">✔</button>
