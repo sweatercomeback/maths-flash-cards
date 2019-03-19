@@ -15,9 +15,7 @@ const buildQuestion = async () => {
   let q2 = parseInt(qs[1]);
   const add = parseInt(qs[2]) % 2 === 0;
   if (!add && q1 < q2) {
-    const qStash = q1;
-    q1 = q2;
-    q2 = qStash;
+    q2 = [q1, (q1 = q2)][0];
   }
 
   return {
